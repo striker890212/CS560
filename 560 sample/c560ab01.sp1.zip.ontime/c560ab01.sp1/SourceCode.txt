@@ -1,0 +1,76 @@
+Altest1	Start	0			
+	USING		:	Base Register in Use	
+	LD-BR	*	:	Use current memory address	
+	EXTERNAL	DQ			
+	LD-AC	=0	:	Clear AC	
+	LD-IR	=0	:	Clear IR	
+LoopStart	READ-NUM	XX,IR	:	Read in pair of numbers XX,YY	
+INDEX	EQU	2
+TOTAL	EQU	4
+	COMP	RES=10+4-3/2*1
+	ADR-COMP	*+local
+CARL	EQU-exp	**10
+	Write-num	XX,IR		
+	READ-NUM	YY,IR			
+	Write-num	YY,IR		
+	LD-AC	YY,IR	:	Test is YY is zero	
+	JMP-AC-EQ	YY_IS_ZERO			
+	LD-AC	XX,IR			
+	LD-IR	YY,IR			
+	ST-AC	res,IR	:	Store Result of Division	
+	ADD-IR	=1			
+	sub-ir	=4			
+	Jmp-IR-EQ	Sum-It-Up	:	Through loop?	
+	Jmp-IR-GT	Sum_It_Up	:	Should be unnecessary	
+	add-ir	=4			
+	Jmp	LoopStart			
+Sum_It_/Up	LD-IR	=0			
+Sum_loop	ADD-AC	res,IR			
+	ADD-IR	=1			
+	sub-ir	=4			
+	Jmp-IR-EQ	AllDone			
+	Jmp-IR-GT	AllDone	:	Should be unnecessary	
+	add-ir	=4			
+	Jmp	Sum_loop			
+AllDone	St-AC	RESULT			
+	St-AC	DQ			
+	WRITE-STR	M1.1			
+	WRITE-STR	M1.2			
+	WRITE-STR	M1.3			
+	WRITE-STR	M1.4			
+	WRITE-NUM	RESULT			
+E1	WRITE-STR	M2.1			
+	WRITE-STR	M2.2			
+	WRITE-STR	M2.3			
+	HALT	0			
+YY_IS_ZERO	WRITE-STR	ERR1.1			
+	WRITE-STR	ERR1.2			
+	WRITE-STR	ERR1.3			
+	WRITE-STR	M2.1			
+	WRITE-STR	M2.2			
+	WRITE-STR	M2.3			
+	HALT	2			: CONSTANTS AND TEMPORARIES					
+A1	ADR	DQ	:ADDRESS OF DQ.		
+A2 	ADR	XX	:ADDRESS of XX.		
+M1.1	WORD-CHR	‘  ‘	:MESSAGE IS:		Q=
+M1.2	WORD-CHR	‘  ‘			
+M1.3	WORD-CHR	‘  ‘			
+M1.4	WORD-CHR	‘Q= '			
+M2.1	WORD-CHR	‘END‘			
+M2.2	WORD-CHR	‘ PR’			
+M2.3	WORD-CHR	‘OG ’			
+ERR1.1	WORD-CHR	‘DIV’			
+ERR1.2	WORD-CHR	‘ by’			
+ERR1.3	WORD-CHR	‘ 0’			
+res	SKIP-mem	4			
+RESULT	word-num	0
+RESULT2	word-num	16777217
+RESULT3	word-num	16777215
+RESULT4 word-num	16777216
+RESULT5	word-num	-16777217
+RESULT6	word-num	-16777215
+RESULT7 word-num	-16777216		
+XX	SKIP-mem	4			
+YY	SKIP-mem	4	
+	add-ir	=5		
+	END	:Altest1			

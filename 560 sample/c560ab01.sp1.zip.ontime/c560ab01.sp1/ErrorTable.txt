@@ -1,0 +1,29 @@
+Reference Number	Code	Level	Error Message	
+1	INVALID TYPE1 OPERAND	Intermediate	The number given needs to be within the range of 0-4095.	
+2	UNDEFINED INSTRUCTION	Intermediate	The current instruction is not in the MOT or POT tables.	
+3	INVALID TYPE2 OPERAND Intermediate	The number given needs to be within the range of 0-4095, or an EQU in the same range.	
+4	INVALID LABEL	Intermediate	The label given was not in the correct format (Maximum length 64 characters A-Z, a-z, 0-9 (-_.)).	
+5	INVALID OPCODE	Intermediate	The opcode given was not a valid opcode.	
+6	INVALID OPERAND	Intermediate	The operand given was not used properly.	
+7	UNDEFINED VARIABLE	Intermediate	The variable used was not defined.	
+8	CANNOT DEFINE PREVIOUSLY DEFINED SYMBOL	Intermediate	The symbol used already exists.	
+9	GINORMO SHIFT	Warning	Are you sure you want to shift 24 or more bits? Technically that's deleting your data...	
+10	GINORMO ROTATE	Warning	Are you sure you want to rotate 24 or more bits? The end result could be achieved with less rotating...	
+11	RESULT TOO BIG	Intermediate	The result of that computation is out of range (-(2^24) to((2^24)-1).	
+12	DIVIDED BY ZERO	Intermediate	Hey dummy... you can't divide by zero.	
+13	REQUIRED LABEL NOT PRESENT	Intermediate	This directive requires a label. Give it one (in an acceptable format).	
+13	NO LABEL ALLOWED	Warning	You gave a label for this when it wasn't allowed, so we're going to pretend it isn't there and continue.	
+14	DEBUG IS ALREADY ON	Warning	Debug is already on silly.	
+15	DEBUG IS ALREADY OFF	Warning	Debug is already off silly.	
+16	RESET LC TOO LOW	Intermediate	You can't set the Location Counter lower than what it is currently.	
+17	SKIPPED TOO FAR	Fatal	You can't skip more memory than you have.	
+18	START FAILURE	Fatal	You need to have a start directive, and start the program within the limits of memory.	
+19	WORD NUM WRONG BASE	Intermediate	The input needs to be given in base 10.	
+20	WORD CHAR EXCESS CHARS	Warning	You gave us too much input.	
+21	UNDEFINED LABEL	Intermediate	The current label was not in the symbol table.	
+22	CODE OCCURS AFTER END DIRECTIVE	Intermediate	The code after 'END' will not be ignored, since 'END' signals the end of the program.	
+23	DEBUG DIRECTIVE HAS TOO MANY OPERANDS	Intermediate	The only acceptable operands for 'Debug' are 'On' or 'Off'.	
+24	INVALID COMMENT	Warning	All comments must begin with a colon(:).	
+25	INVALID LITERAL	Intermediate	The literal given was not in a valid format. for a char use the format "'abc'", for a number use base 10.	
+26	USING HAS BEEN USED	Intermediate	You can only use the using command once.	
+27	WORD-NUM IS OUT OF RANGE	Intermediate	The number assigned word-num is out of range. Try giving a smaller number.	

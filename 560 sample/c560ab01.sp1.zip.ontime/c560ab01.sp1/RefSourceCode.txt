@@ -1,0 +1,10 @@
+RefTest	Start	0	
+	st-ir	10
+	add-ac	5,IR
+			
+	ld-ac	%11
+	mul-ir	%12,IR
+	
+	or-ir	#44
+	lor-ac	#21,IR
+	END	:RefTest		

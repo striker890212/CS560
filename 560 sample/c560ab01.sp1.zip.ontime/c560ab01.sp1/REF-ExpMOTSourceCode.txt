@@ -1,0 +1,16 @@
+REFExp	Start	0	
+DONALD	land-ir	14
+	or-sr	DONALD :Label/Symbol
+	st-ir	*+10
+AC	EQU		2
+
+
+	ld-ac	*-4
+	or-ir	*+AC :Equated Symbol
+	ld-ir	#='ABC' :Symbol
+	lor-ir	#='DE'	:Other Symbol
+	lor-ir	#=3,IR	:Other Symbol
+	ld-ir	%='ABC' :Symbol
+	lor-ir	%='DE'	:Other Symbol
+	lor-ir	%=3,IR	:Other Symbol
+	END	:REFExp

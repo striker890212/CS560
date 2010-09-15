@@ -1,0 +1,20 @@
+Literaltest	start	0
+	Debug	on	: should be skipped over
+	Debug	on	: should turn on debug mode
+	USING		:	Base Register in Use	
+	Debug OFF	:	should turn off debug mode
+equatesymb	EQU	3
+	alt-start	1
+	reset-lc	4
+	SKIP-mem	3	:skip 3 words of mem
+	External	DQ	:adds the external DQ
+	Entry equatesymb	: makes equatesymb available to other programs
+	COMP	RES=10+4-3/2*1
+	ADR-COMP	*+DQ
+number word-num 43 
+character word-chr 'abc'
+char2	word-chr	'  f'
+hex	word-hex	1A :hex 26
+bin	word-bin	001010
+	NOP
+	END :still need to add alt-start and the reset-lc directives to the test.

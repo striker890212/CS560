@@ -1,0 +1,18 @@
+AddrSc	start 0
+	ld-ac =22
+	ld-ir =15
+	ld-br = 8 	:SHOULD THROW AN ERROR
+	st-br charles
+	DONALD	land-ir	14
+	or-sr	DONALD :Label/Symbol
+	st-ir	*+10
+AC	EQU		2
+	ld-ac	*-4
+	or-ir	*+AC :Equated Symbol
+	ld-ir	#='ABC' :Symbol
+	lor-ir	#='DE'	:Other Symbol
+	lor-ir	#=3,IR	:Other Symbol
+	ld-ir	%='ABC' :Symbol
+	lor-ir	%='DE'	:Other Symbol
+	lor-ir	%=3,IR	:Other Symbol
+	end :AddrSc

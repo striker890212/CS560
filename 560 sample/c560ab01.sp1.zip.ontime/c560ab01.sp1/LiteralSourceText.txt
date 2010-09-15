@@ -1,0 +1,19 @@
+Literaltest	start	0
+	skip-mem 4
+	debug on
+	ld-ac =0
+	ld-ac =400
+	ld-ac =1600
+	ld-ac ='aaa'
+	ld-ac ='aba'
+	ld-ac ='abc'
+	ld-ac ='  b'
+	ld-ac =' b '
+	ld-ac ='b  '
+	ld-ac ='b b'
+	ld-ac =16777215
+	ld-ac =16777216
+	ld-ac =-16777216	
+	ld-ac =-16777217	
+	debug off
+	END

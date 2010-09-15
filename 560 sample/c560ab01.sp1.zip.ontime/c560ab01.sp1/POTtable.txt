@@ -1,0 +1,20 @@
+label	Directive	operand		Description	Consumes memory?	
+rl		START		type 1		Defines the start of the program.	NO	
+none	End			none		Defines the end of the program.	NO	
+ol		RESET-LC	type 2		Resets the LC to the new value. Must be greater than the last assigned LC.	NO	
+none	USING		none		Indicates that the program addressing will be relative to the BASE REGISTEr. It must appear before any instruction or data that consumes memory	NO	
+none	DEBUG		On or Off	Turns on the debug feature of the simulator	NO	
+rl		EQU			type 1		equates the label string to a replace value	NO	
+rl		EQU-exp		EXPRESSION 1	equates the label to the results of an expression.	NO	
+none	Alt-start	reference	Alternative execution starting point	NO	
+none	SKIP-mem	type 2		Skips a number of words based on the operand	YES	
+none	Entry		"label,label,label,label"	Defines local variables as available for reference by another program.	NO	
+none	External	"ex-label,ex-label,ex-label,ex-label"	Declares that these are external variable references	NO	
+ol		word-num	base 10 number right justified	defines a word containing the numeric value	YES	
+ol		word-chr	'ccc' left justified	defines a word to contain the character string	YES	
+ol		word-hex	hex string right justified	defines a word containing a hex value	YES	
+ol		word-bin	binary string right justified	defines a word containing a binary value	YES	
+ol		COMP		EXPRESSION 2	Develops the corresponding assembles code based on the expression.	YES	
+ol		Adr-comp	EXPRESSION 3	Address computation	YES	
+ol		Adr			Address constant	Define a word and place the address of the operand in the word	YES	
+ol		NOP			none		Generates a SLA-AC 0	YES	
