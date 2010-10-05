@@ -9,13 +9,13 @@ public interface errorTableClass {
 	/*
 	 * import the error table text file into a data structure.
 	 */
-	void importTable (File fileName);
+	void importTable (File tableFileName);
 	
 	/*
 	 * When given an error code it returns a boolean if the error code exists in the data structure. Return is true if error code 
 	 * exists. False otherwise.
 	 */
-	Boolean doesErrorExist (String errorCode);
+	Boolean hasErrorType (String errorCode);
 	
 	/*
 	 * When given an error code this returns its associated error message.
