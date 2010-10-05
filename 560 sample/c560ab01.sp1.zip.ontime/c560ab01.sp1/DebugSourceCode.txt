@@ -1,8 +1,0 @@
-DebugTest	Start	0	
-	st-ir	10
-	DEBUG	on
-	ld-ac	5
-	DEBUG	off
-	or-ir	8
-DAVID	Debug	on :SHOULD BE ERROR
-	END	:DebugTest

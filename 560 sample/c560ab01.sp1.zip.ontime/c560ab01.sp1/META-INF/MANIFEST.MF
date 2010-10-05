@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Rsrc-Class-Path: ./ org.hamcrest.core_1.1.0.v20090501071000.jar junit.
- jar
-Class-Path: .
-Rsrc-Main-Class: Main
-Main-Class: org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader
-
