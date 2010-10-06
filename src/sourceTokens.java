@@ -3,6 +3,9 @@ import java.util.StringTokenizer;
 
 
 /**
+ * 
+ * @author damicoac
+ * 
  * This class will import a source code file. It will import the whole file and create the tokens for it. This will allow for 
  * easier use of tokens instead of using the tokenizer outright. Essentially it extends tokenizer with more functionality. 
  * This class might be over kill. But it adds the ability to do a 3 pass compiler. 
