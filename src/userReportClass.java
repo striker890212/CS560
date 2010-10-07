@@ -1,5 +1,4 @@
 import java.io.File;
-import java.util.ArrayList;
 
 /**
  * 
@@ -20,7 +19,7 @@ public interface userReportClass {
 	 * this Array by merging the source code with the errors found in the source code. This maintains the source code in full but just adds the associated errors.
 	 * The method doesnt return a value. Instead it stores the ArrayList<String>  as a member variable.
 	 */
-	void createUserReport (inSourceCode SourceCodeArray, foundErrorsClass foundErrorsTable);
+	void createUserReport (InSourceCode SourceCodeArray, ErrorOut foundErrorsTable);
 	
 	/**
 	 * 

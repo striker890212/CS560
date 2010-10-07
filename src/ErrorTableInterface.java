@@ -7,7 +7,7 @@ import java.io.*;
  * Error table is a flat text file. The name of this file is stored on the root directory of the code (As it is with all
  * tables or files that need to be imported). This class has the methods to import this file into a data structure. 
  */
-public interface errorTableClass {
+public interface ErrorTableInterface {
 
 	/**
 	 * import the error table text file into a data structure.

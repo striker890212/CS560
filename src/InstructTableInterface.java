@@ -4,11 +4,11 @@ import java.io.File;
  * 
  * @author damicoac
  * 
- * MOT is a flat text file. The name of this file is stored on the root directory of the code (As it is with all
+ * Instruction table is a flat text file. The name of this file is stored on the root directory of the code (As it is with all
  * tables or files that need to be imported). This class has the methods to import this file into a data structure.
  *
  */
-public interface MOTClass {
+public interface InstructTableInterface {
 
 	/**
 	 * 
@@ -18,10 +18,10 @@ public interface MOTClass {
 	
 	/**
 	 * 
-	 * When given an Operation it returns a boolean if the error code exists in the data structure. Return is true if Operation 
+	 * When given an instruction it returns a boolean if the error code exists in the data structure. Return is true if instruction 
 	 * exists. False otherwise.
 	 */
-	Boolean hasOperation (String operationName);
+	Boolean hasInstruction (String instructionName);
 	
 	/**
 	 * 
@@ -32,6 +32,5 @@ public interface MOTClass {
 	 * each item to get.
 	 */
 	String get$Item (String parentItemName);
-	
 	
 }

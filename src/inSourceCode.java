@@ -7,7 +7,7 @@ import java.io.File;
  * Import the source code into an ArrayList<String>. Store this as a member variable.
  *
  */
-public interface inSourceCode {
+public interface InSourceCode {
 	
 	/**
 	 * 
