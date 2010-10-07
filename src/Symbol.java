@@ -46,28 +46,28 @@ public interface Symbol {
 	/**
 	 * Gets the name of the symbol in question.
 	 * 
-	 * @return labelOut The name of the symbol.
+	 * @return The name of the symbol.
 	 */
 	String getLabel();
 	
 	/**
 	 * Gets the location of the symbol.
 	 * 
-	 * @return locationOut The location in memory of the symbol.
+	 * @return The location in memory of the symbol.
 	 */
 	int getLocation();
 	
 	/**
 	 * Gets the value of the symbol.
 	 * 
-	 * @return useOut The value of the symbol.
+	 * @return The value of the symbol.
 	 */
 	int getUsage();
 	
 	/**
 	 * Gets the length of the symbol.
 	 * 
-	 * @return lengthOut The length of the symbol.
+	 * @return The length of the symbol.
 	 */
 	int getLength();
 }
