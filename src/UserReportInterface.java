@@ -4,7 +4,7 @@ import java.io.File;
  * 
  * @author damicoac
  *
- * The class requires two parameters in its constructor, the source code object (ie created by inSourceCode class) and the user error table object (ie created by foundErrorsClass).
+ * The class requires two parameters in its constructor, the source code object (ie created by InSourceCode class) and the user error table object (ie created by ErrorsOut).
  * It takes these and creates an object with the errors added to the source code under the line they are associated with (ie where the error is found).
  * 
  */

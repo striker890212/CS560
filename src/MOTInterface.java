@@ -18,7 +18,7 @@ public interface MOTInterface {
 	
 	/**
 	 * 
-	 * When given an Operation it returns a boolean if the error code exists in the data structure. Return is true if Operation 
+	 * When given an Operation it returns a boolean if the operation exists in the data structure. Return is true if Operation 
 	 * exists. False otherwise.
 	 */
 	Boolean hasOperation (String operationName);
