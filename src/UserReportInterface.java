@@ -8,7 +8,7 @@ import java.io.File;
  * It takes these and creates an object with the errors added to the source code under the line they are associated with (ie where the error is found).
  * 
  */
-public interface userReportClass {
+public interface UserReportInterface {
 	
 	/**
 	 * 
