@@ -17,7 +17,9 @@ public interface ErrorOut {
 	
 	/**
 	 * Searches through the master list of errors and returns the error <br />
-	 * at the specified line.
+	 * at the specified line. NOTE: Given the current implementation, <br />
+	 * the error MUST EXIST inside of the list, or it will simply return <br />
+	 * the last error in the list. 
 	 * 
 	 * @param lineNumber The line where the error exists at.
 	 */
@@ -26,9 +28,10 @@ public interface ErrorOut {
 	/**
 	 * Returns whether or not the error exists in the master list.
 	 * 
+	 * @param err The error whose existence is in question.
 	 * @return True iff the error exists in the master list, false otherwise.
 	 */
-	boolean errorExists();
+	boolean errorExists(Error err);
 	
 	/**
 	 * Returns a string with a formatted message including the Error Code <br />

@@ -36,17 +36,9 @@ public interface SymbolTable {
 	 * Updates what value the symbol contains in the symbol table.
 	 * 
 	 * @param label The name of the symbol whose usage is being updated.
-	 * @param usage The value the symbol will take on.
+	 * @param usage True if the symbol has been used, false otherwise.
 	 */
-	void updateUsage (String label, int usage);
-	
-	/**
-	 * Use to be determined, currently listed as a placeholder.
-	 * 
-	 * @param label
-	 * @param symb
-	 */
-	void getSymbol (String label, Symbol symb);
+	void updateUsage (String label, boolean usage);
 	
 	/**
 	 * Returns the location of a given Symbol.
@@ -63,4 +55,10 @@ public interface SymbolTable {
 	 * @return The length of said symbol.
 	 */
 	int GetLength (String label);
+	
+	/**
+	 * Sorts the symbol table's representation by label.
+	 */
+	void sort();
+	
 }

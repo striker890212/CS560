@@ -1,7 +1,9 @@
 /**
  * The representation of the Symbols, represented by a String named label, <br />
- * an Int named location representing the location in memory, and an Int <br />
- * named usage representing the value.
+ * an Int named location representing the location in memory, and boolean <br />
+ * named usage representing whether it has been used or not.
+ * 
+ * NOTE: DO NOT CONFUSE THE SYMBOL'S NAME IN JAVA WITH ITS LABEL IN SAL560!!
  * 
  * @author Austin and Jeff
  *
@@ -23,25 +25,18 @@ public interface Symbol {
 	void setLocation (int loc);
 	
 	/**
-	 * Sets the value of the symbol.
+	 * Sets whether or not the symbol has been used.
 	 * 
-	 * @param use The value given to the symbol.
+	 * @param use True iff the symbol has been used, false otherwise..
 	 */
-	void setUsage (int use);
+	void setUsage (boolean use);
 	
 	/**
 	 * Sets the length of the symbol.
-	 */
-	void setLength();
-	
-	/**
-	 * Use to be determined, currently listed as a placeholder
 	 * 
-	 * @param name
-	 * @param loc
-	 * @param use
+	 * @param length The length of the symbol, usually one word or 32 bits.
 	 */
-	void getSymbolFields (String name, int loc, int use);
+	void setLength(int length);
 	
 	/**
 	 * Gets the name of the symbol in question.
@@ -58,11 +53,11 @@ public interface Symbol {
 	int getLocation();
 	
 	/**
-	 * Gets the value of the symbol.
+	 * Gets the usage of the symbol.
 	 * 
-	 * @return The value of the symbol.
+	 * @return True iff the symbol has been used, false otherwise.
 	 */
-	int getUsage();
+	boolean getUsage();
 	
 	/**
 	 * Gets the length of the symbol.
