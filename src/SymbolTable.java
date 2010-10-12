@@ -61,4 +61,12 @@ public interface SymbolTable {
 	 */
 	void sort();
 	
+	/**
+	 * Outputs the Symbol table with all of its parameters into a string,
+	 * with lines terminated by the newline character '\n'. The newline character
+	 * may be changed based on which type of OS we decide to test on.
+	 * 
+	 * @return A string containing the symbol table and data.
+	 */
+	String outputTable();
 }

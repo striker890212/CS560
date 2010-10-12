@@ -158,7 +158,7 @@ public class SmallSymbolTable implements SymbolTable {
 				
 				//If there is nothing left to compare to, the symbol must come last,
 				//so add it to the end.
-				if (innerCounter == this.symTable.size()) 
+				if (innerCounter == sorter.size()) 
 				{
 					sorter.add(innerCounter, this.symTable.get(counter));
 					break;
@@ -186,7 +186,31 @@ public class SmallSymbolTable implements SymbolTable {
 			}
 			counter++;
 		}
-
+		this.symTable = sorter;
+	}
+	
+	public String outputTable() {
+		int counter = 0;
+		Symbol currentSymb;
+		
+		//Create an output string with a formatted header containing data by
+		//column
+		String output = "\t\t\t Symbol Table \nLabel\t|\tLocation\t|\tLength\t|\tUsage\n";
+		
+		//Get information for each Symbol and add it to the output.
+		while (counter < this.symTable.size())
+		{
+			//Set the current symbol for performance measures.
+			currentSymb = this.symTable.get(counter);
+			//Add in the data about that symbol complete with formatted lines.
+			output = output.concat(currentSymb.getLabel() + "\t|\t");
+			output = output.concat(currentSymb.getLocation() + "\t\t|\t");
+			output = output.concat(currentSymb.getLength() + "\t|\t");
+			output = output.concat(currentSymb.getUsage() + "\n");
+			counter++;
+		}
+		
+		return output;
 	}
 
 }
