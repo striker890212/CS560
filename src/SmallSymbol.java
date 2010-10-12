@@ -1,6 +1,6 @@
 /**
  * Contains all necessary data about a symbol for the symbol table, as represented
- * by a label, a location, a length, and a usage flag.
+ * by a label, a location, a length, and a usage type.
  * 
  * NOTE: DO NOT CONFUSE THE SYMBOL'S NAME IN JAVA WITH ITS LABEL IN SAL560
  * 
@@ -11,14 +11,14 @@ public class SmallSymbol implements Symbol {
 	private String label;
 	private int location;
 	private int length;
-	private boolean usage;
+	private String usage;
 	
 	//Default constructor initializing values.
 	public SmallSymbol() {
 		this.label = new String();
 		this.location = 0;
 		this.length = 32;
-		this.usage = false;
+		this.usage = new String();
 	}
 	
 	//Constructor taking necessary/always available parameters.
@@ -26,7 +26,7 @@ public class SmallSymbol implements Symbol {
 		this.label = name;
 		this.location = loc;
 		this.length = length;
-		this.usage = false;
+		this.usage = new String();
 	}
 	
 	@Override
@@ -44,8 +44,8 @@ public class SmallSymbol implements Symbol {
 	}
 
 	@Override
-	public void setUsage(boolean use) {
-		//Sets whether or not the symbol has been used.
+	public void setUsage(String use) {
+		//Sets how the symbol has been used.
 		this.usage = use;
 	}
 
@@ -69,7 +69,7 @@ public class SmallSymbol implements Symbol {
 	}
 
 	@Override
-	public boolean getUsage() {
+	public String getUsage() {
 		//Return whether or not the symbol has been used.
 		return this.usage;
 	}

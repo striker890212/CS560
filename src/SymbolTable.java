@@ -24,7 +24,7 @@ public interface SymbolTable {
 	boolean symbolIsDefined (String label);
 	
 	/**
-	 * Updates the symbol's data in the symbol table with the new location <br />
+	 * Updates the symbol's data in the symbol table with the new location/ <br />
 	 * location counter.
 	 * 
 	 * @param label The name of the symbol to be updated.
@@ -36,9 +36,9 @@ public interface SymbolTable {
 	 * Updates what value the symbol contains in the symbol table.
 	 * 
 	 * @param label The name of the symbol whose usage is being updated.
-	 * @param usage True if the symbol has been used, false otherwise.
+	 * @param usage How the symbol is being used, label, start.exec, etc.
 	 */
-	void updateUsage (String label, boolean usage);
+	void updateUsage (String label, String usage);
 	
 	/**
 	 * Returns the location of a given Symbol.
@@ -57,7 +57,7 @@ public interface SymbolTable {
 	int GetLength (String label);
 	
 	/**
-	 * Sorts the symbol table's representation by label.
+	 * Sorts the symbol table's representation by label. 
 	 */
 	void sort();
 	

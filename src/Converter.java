@@ -46,5 +46,13 @@ public interface Converter {
 	 */
 	String decimalToBinary(int decimal);
 	
+	/**
+	 * Converts an ascii string into its binary representation.
+	 * 
+	 * @param ascii The string to be converted into binary.
+	 * @return The binary representation of an ascii string.
+	 */
+	String asciiToBinary(String ascii);
+	
 	
 }

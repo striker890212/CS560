@@ -124,6 +124,11 @@ public class OpConverter implements Converter {
 		//Return the binary string.
 		return Integer.toBinaryString(decimal);
 	}
+	
+	public String asciiToBinary(String ascii) {
+		//TODO: code this plx
+		return null;
+	}
 
 	/**
 	 * This private method is called for the intermediate step in some <br />

@@ -78,7 +78,7 @@ public class SmallSymbolTable implements SymbolTable {
 	}
 
 	@Override
-	public void updateUsage(String label, boolean usage) {
+	public void updateUsage(String label, String usage) {
 		int counter = 0;
 		
 		//Iterate through the symbol table to find the symbol with name label.
@@ -134,7 +134,58 @@ public class SmallSymbolTable implements SymbolTable {
 
 	@Override
 	public void sort() {
-		// TODO Discuss most efficient sorting method.
+		ArrayList<Symbol> sorter = new ArrayList<Symbol>();
+		//Set the loop counter to 1 since we're skipping the first element.
+		int counter = 1;
+		//Set an inner loop counter for a nested loop to go through the arrays.
+		int innerCounter = 0;
+		
+		//Copy the very first element into a sorting arrayList.
+		sorter.add(this.symTable.get(0));
+		
+		//Copy each element from the original array into the sorting array, in
+		//sorted order.
+		while (counter < this.symTable.size())
+		{
+			innerCounter = 0;
+			while (innerCounter <= this.symTable.size())
+			{
+				//Check if the symbol name should come before or after the 
+				//current symbol name. If it should come before it, place it there.
+				//If it should come after it, check the next symbol name as well.
+			    //Only place the symbol before another symbol, or at the end of the
+				//array.
+				
+				//If there is nothing left to compare to, the symbol must come last,
+				//so add it to the end.
+				if (innerCounter == this.symTable.size()) 
+				{
+					sorter.add(innerCounter, this.symTable.get(counter));
+					break;
+				}
+				//If lexicographically larger, increment the innnerCounter
+				//and keep looking for its proper place.
+				else if ((this.symTable.get(counter).getLabel().compareToIgnoreCase(sorter.get(innerCounter).getLabel())) > 0)
+				{
+					innerCounter++;
+				}
+				//If lexicographically smaller, add the new symbol in right before
+				//the equivalent symbol and break from the loop
+				else if ((this.symTable.get(counter).getLabel().compareToIgnoreCase(sorter.get(innerCounter).getLabel())) < 0)
+				{
+					sorter.add(innerCounter, this.symTable.get(counter));
+					break;
+				}
+				//If the same, add the new symbol in right before the equivalent symbol
+				//and break from the nested loop.
+				else
+				{
+					sorter.add(innerCounter, this.symTable.get(counter));
+					break;
+				}
+			}
+			counter++;
+		}
 
 	}
 
