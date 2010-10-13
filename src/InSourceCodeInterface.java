@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.ArrayList;
 
 /**
  * 
@@ -18,5 +19,10 @@ public interface InSourceCodeInterface
 	 * an index inteh ArrayList (ie line 1 will be at index [0] of the array).
 	 */
 	void importSourceCode (File sourceCodeFileName);
+	
+	/**
+	 * Return the imported source code as an ArrayList<String> ie the member variable
+	 */
+	ArrayList<String> getSourceCodeArray ();
 
 }

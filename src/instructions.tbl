@@ -4,12 +4,12 @@
 #A	OP	FC	Instruction
 I	10	NA	addi 
 I	11	NA	addiu
-I	12		subi 
-I	13		subiu
-I	14		muli 
-I	15		muliu
-I	16		divi
-I	17		diviu
+I	12	-	subi 
+I	13	-	subiu
+I	14	-	muli 
+I	15	-	muliu
+I	16	-	divi
+I	17	-	diviu
 S	20	NA	jeq
 S	21	NA	jne
 S	22	NA	jgt
@@ -20,7 +20,7 @@ S	30	NA	lw
 S	31	NA	lnw
 S	32	NA	lwi
 I	33	NA	lui
-I	34		ori
+I	34	-	ori
 I	35	NA	xori
 I	36	NA	nori
 I	37	NA	andi
@@ -48,14 +48,14 @@ R	2	25	or
 R	2	26	xor
 R	2	27	nor
 R	3	8	jr
-I	3D		SRV
-R	3F		DUMP
+I	3D	-	SRV
+R	3F	-	DUMP
 IO	4	0	inn
 IO	4	1	inc
 IO	4	10	outn
 IO	4	11	outc
-I	1E		outni
-I	1F		outci			
+I	1E	-	outni
+I	1F	-	outci			
 S	1A	NA	adds
 S	1B	NA	subs 
 S	1C	NA	muls

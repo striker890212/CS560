@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.IOException;
 
 
 /**
@@ -15,8 +16,9 @@ public interface DirectiveTableInterface
 	/**
 	 * 
 	 * import the directive text file into a data structure.
+	 * @throws IOException 
 	 */
-	void importTable (File tableFileName);
+	void importTable (File tableFileName) throws IOException;
 	
 	/**
 	 * 

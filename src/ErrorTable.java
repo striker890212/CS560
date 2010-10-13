@@ -26,7 +26,8 @@ public class ErrorTable implements ErrorTableInterface {
 	//This constructor will immediately call the import code on the object. It is the equivalent of calling the constructor and the importTable method in the same line
 	public ErrorTable(File tableFileName) throws IOException
 	{
-		//get input from file, normally that file will be error.tbl and be located in the src directory of the code, here it will be hard coded
+		
+		//get input from file, normally that file will be error.tbl and be located in the src directory of the code
 		BufferedReader input = new BufferedReader(new FileReader(tableFileName));
 		String newLine;
 		
