@@ -27,10 +27,15 @@ public class InSourceCode implements InSourceCodeInterface {
 	
 	/*
 	 * Import the source code into an ArrayList<Sting>. This will be a member variable. This is where code can be before it is tokenized as an option. Each line of input will be associated with
-	 * an index inteh ArrayList (ie line 1 will be at index [0] of the array).
+	 * an index in the ArrayList (ie line 1 will be at index [0] of the array). The method will also clear out the previous source code just to be sure that when source code is imported
+	 * it is on a fresh data structure.
 	 */
 	public void importSourceCode (File sourceCodeFileName) throws IOException
 	{
+		
+		//clear data structure
+		source.clear();
+		
 		//get input from file, 
 		BufferedReader input = new BufferedReader(new FileReader(sourceCodeFileName));
 		String newLine;
