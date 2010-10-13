@@ -17,7 +17,7 @@ public class DirectiveTable implements DirectiveTableInterface {
 	/*
 	 * member variables. The table is modeled on one properties objects. Properties objects have a key and a value. The key is the directive string and the value is the impact memory boolean
 	 */
-	Properties directiveNameTable = new Properties();
+	private Properties directiveNameTable = new Properties();
 
 	
 	//constructors

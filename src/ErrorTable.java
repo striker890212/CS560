@@ -13,8 +13,8 @@ public class ErrorTable implements ErrorTableInterface {
 	 * member variables. The table is modeled on two properties objects. Properties objects have a key and a value. The key in both will be the error code. The value in the first one
 	 * will be the error type. In the second it will be the Error Message
 	 */
-	Properties errorValue = new Properties();
-	Properties errorMessage = new Properties();
+	private Properties errorValue = new Properties();
+	private Properties errorMessage = new Properties();
 	
 	//constructor
 	public ErrorTable() 

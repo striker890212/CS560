@@ -20,9 +20,9 @@ public class InstructTable implements InstructTableInterface {
 	 * member variables. The table is modeled on three properties objects. Properties objects have a key and a value. The key in all three will be the instruction name. The value in the first one
 	 * will be the instruction type. In the second it will be the opcode and in the third it will be the function code.
 	 */
-	Properties instructionType = new Properties();
-	Properties instructionOpcode = new Properties();
-	Properties instructionFunctionCode = new Properties();
+	private Properties instructionType = new Properties();
+	private Properties instructionOpcode = new Properties();
+	private Properties instructionFunctionCode = new Properties();
 	
 	//constructor
 	public InstructTable()
