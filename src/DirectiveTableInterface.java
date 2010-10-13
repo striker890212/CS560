@@ -3,7 +3,7 @@ import java.io.File;
 
 /**
  * 
- * @author damicoac
+ * @author Aaron D'Amico
  * 
  * Directives table is a flat text file. The name of this file is stored on the root directory of the code (As it is with all
  * tables or files that need to be imported). This class has the methods to import this file into a data structure.

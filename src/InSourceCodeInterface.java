@@ -2,7 +2,7 @@ import java.io.File;
 
 /**
  * 
- * @author damicoac
+ * @author Aaron D'Amico
  *
  * Import the source code into an ArrayList<String>. Store this as a member variable.
  *
