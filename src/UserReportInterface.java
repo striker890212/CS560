@@ -20,7 +20,7 @@ public interface UserReportInterface
 	 * this Array by merging the source code with the errors found in the source code. This maintains the source code in full but just adds the associated errors.
 	 * The method doesnt return a value. Instead it stores the ArrayList<String>  as a member variable.
 	 */
-	void createUserReport (InSourceCode SourceCodeArray, ErrorOut foundErrorsTable);
+	void createUserReport (InSourceCodeInterface SourceCodeArray, ErrorOut foundErrorsTable);
 	
 	/**
 	 * 
