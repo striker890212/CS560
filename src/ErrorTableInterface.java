@@ -31,7 +31,7 @@ public interface ErrorTableInterface
 	 * @param errorCode
 	 * @return 
 	 * 
-	 * When given an error code this returns its associated error message.
+	 * When given an error code this returns its associated error message. Return String "no error message for that code" if that error code doesnt exist
 	 */
 	String getErrorMessage (String errorCode);
 	
