@@ -7,8 +7,8 @@
  */
 public class OpConverter implements Converter {
 
-	private OpConverter() {
-		//Private default constructor, as this is a utility class.
+	public OpConverter() {
+		//No fields, it's a utility class.
 	}
 	
 	@Override
