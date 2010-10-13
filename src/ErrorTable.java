@@ -27,7 +27,7 @@ public class ErrorTable implements ErrorTableInterface {
 	public ErrorTable(File tableFileName) throws IOException
 	{
 		//get input from file, normally that file will be error.tbl and be located in the src directory of the code, here it will be hard coded
-		BufferedReader input = new BufferedReader(new FileReader("error.tbl"));
+		BufferedReader input = new BufferedReader(new FileReader(tableFileName));
 		String newLine;
 		
 		//keep getting lines of from the file and add them to the properties objects until the file and been completely traversed
@@ -69,8 +69,8 @@ public class ErrorTable implements ErrorTableInterface {
 	@Override
 	public void importTable(File tableFileName) throws IOException {
 
-		//get input from file, normally that file will be error.tbl and be located in the src directory of the code, here it will be hard coded
-		BufferedReader input = new BufferedReader(new FileReader("error.tbl"));
+		//get input from file, normally that file will be error.tbl and be located in the src directory of the code
+		BufferedReader input = new BufferedReader(new FileReader(tableFileName));
 		String newLine;
 		
 		//keep getting lines of from the file and add them to the properties objects until the file and been completely traversed

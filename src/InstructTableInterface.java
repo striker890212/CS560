@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.IOException;
 
 /**
  * 
@@ -14,8 +15,9 @@ public interface InstructTableInterface
 	/**
 	 * 
 	 * import the MOT text file into a data structure.
+	 * @throws IOException 
 	 */
-	void importTable (File tableFileName);
+	void importTable (File tableFileName) throws IOException;
 	
 	/**
 	 * 
@@ -50,6 +52,6 @@ public interface InstructTableInterface
 	 * Get the function code based on the instruction name. This returns a string. It returns the string "function code not present" if the instruction name doesnt exist in the object. It 
 	 * returns the string "NA" is the code is not applicable.
 	 */
-	String getFunctionCode (String functionCode);
+	String getFunctionCode (String instructionName);
 	
 }
