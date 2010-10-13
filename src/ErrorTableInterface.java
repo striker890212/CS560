@@ -44,5 +44,14 @@ public interface ErrorTableInterface
 	 */
 	String getErrorType (String errorCode);
 	
+	/**
+	 * 
+	 * @param errorMessage
+	 * @return
+	 * 
+	 * Get the Error code based on an error message. This returns a string. It returns the string "no error code for that message" if the error message doesnt exist in the object.
+	 */
+	String getErrorCode (String theErrorMessage);
+	
 	
 }

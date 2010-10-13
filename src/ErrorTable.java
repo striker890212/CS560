@@ -10,11 +10,12 @@ import java.util.*;
 public class ErrorTable implements ErrorTableInterface {
 
 	/*
-	 * member variables. The table is modeled on two properties objects. Properties objects have a key and a value. The key in both will be the error code. The value in the first one
-	 * will be the error type. In the second it will be the Error Message
+	 * member variables. The table is modeled on three properties objects. Properties objects have a key and a value. The key in both will be the error code. The value in the first one
+	 * will be the error type. In the second it will be the Error Message. The third properties object will hold the key the is a String with the error message and the value will be the error code
 	 */
 	private Properties errorValue = new Properties();
 	private Properties errorMessage = new Properties();
+	private Properties errorCodes = new Properties();
 	
 	//constructor
 	public ErrorTable() 
@@ -55,6 +56,7 @@ public class ErrorTable implements ErrorTableInterface {
 				//populate the properties objects with the error code, error type and error message
 				errorValue.setProperty(errorCode, errorType);
 				errorMessage.setProperty(errorCode, message);
+				errorCodes.setProperty(message, errorCode);
 			}
 		}
 		
@@ -98,6 +100,7 @@ public class ErrorTable implements ErrorTableInterface {
 				//populate the properties objects with the error code, error type and error message
 				errorValue.setProperty(errorCode, errorType);
 				errorMessage.setProperty(errorCode, message);
+				errorCodes.setProperty(message, errorCode);
 			}
 		}
 		
@@ -142,6 +145,21 @@ public class ErrorTable implements ErrorTableInterface {
 		}
 		
 		return "no error type for that code";
+	}
+	
+	/*
+	 * 
+	 * Get the Error code based on an error message. This returns a string. It returns the string "no error code for that message" if the error message doesnt exist in the object.
+	 */
+	public String getErrorCode (String theErrorMessage)
+	{
+		
+		if(errorCodes.containsKey(theErrorMessage) == true)
+		{
+			return errorCodes.getProperty(theErrorMessage);
+		}
+		
+		return "no error code for that message";
 	}
 
 }
