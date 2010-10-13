@@ -27,13 +27,12 @@ public interface DirectiveTableInterface
 	
 	/**
 	 * 
-	 * @param parentItemName
+	 * @param directiveName
 	 * @return
 	 * 
-	 * This further information about an item. This method is a stub where $Item in get$Item is replaced with a specific name. This method is then repeated for
-	 * each item to get.
+	 * Returns true if the directive name impacts memory. ie it is one word or longer. otherwise it returns false.
 	 */
-	String get$Item (String parentItemName);
+	Boolean impactsMemory (String directiveName);
 	
 	
 }

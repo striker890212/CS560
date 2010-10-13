@@ -2,61 +2,61 @@
 #instruction types
 # R = Reg2Reg2Reg, I = I-type Imm, S = S-type Imm, J = Jump, IO = input/output
 #A	OP	FC	Instruction
-I	10	NA	Add immediate
-I	11	NA	Add immediate unsigned
-I	12		Subtract immediate
-I	13		Subtract immediate unsigned
-I	14		Multiply Immediate
-I	15		Multiply Immediate unsigned
-I	16		Divide Immediate
-I	17		Divide Immediate unsigned
-S	20	NA	Jump on equal
-S	21	NA	Jump on not equal
-S	22	NA	Jump greater than
-S	23	NA	Jump less than
-S	24	NA	Jump less than or equal
-S	27	NA	Store word address
-S	30	NA	Load word Address
-S	31	NA	Load negative word 
-S	32	NA	Load word Immediate
-I	33	NA	Load immediate
-I	34	-	Or immediate
-I	35	NA	Exclusive OR immediate
-I	36	NA	Nor Immediate
-I	37	NA	And immediate
-S	38	NA	Load address of word into Register
-S	39	NA	Store address in word 
-S	3A	NA	and register to storage
-S	3B	NA	or register to storage
-S	6	NA	Jump
-S	7	NA	Jump and link
-J	8	NA	HALT
-R	1	18	Multiply
-R	1	19	Multiply unsigned
-R	1	20	Add
-R	1	21	Add unsigned
-R	1	22	Subtract
-R	1	23	Subtract unsigned
-R	1	1A	Divide
-R	1	1B	Divide unsigned
-R	1	1C	Power
-R	2	0	Shift left logical
-R	2	2	Shift right logical
-R	2	3	Shift right arithmetic
-R	2	24	And
-R	2	25	Or
-R	2	26	Exclusive or
-R	2	27	Nor
-R	3	8	Jump register
-I	3D		Set Register Values
+I	10	NA	addi 
+I	11	NA	addiu
+I	12		subi 
+I	13		subiu
+I	14		muli 
+I	15		muliu
+I	16		divi
+I	17		diviu
+S	20	NA	jeq
+S	21	NA	jne
+S	22	NA	jgt
+S	23	NA	jlt
+S	24	NA	jle
+S	27	NA	sw
+S	30	NA	lw
+S	31	NA	lnw
+S	32	NA	lwi
+I	33	NA	lui
+I	34		ori
+I	35	NA	xori
+I	36	NA	nori
+I	37	NA	andi
+S	38	NA	la
+S	39	NA	sa
+S	3A	NA	ands
+S	3B	NA	ors
+S	6	NA	j
+S	7	NA	jal
+J	8	NA	halt
+R	1	18	mul
+R	1	19	mulu
+R	1	20	add
+R	1	21	addu
+R	1	22	sub
+R	1	23	subu
+R	1	1A	div
+R	1	1B	"divu
+R	1	1C	pwr
+R	2	0	sll
+R	2	2	srl
+R	2	3	sra
+R	2	24	and
+R	2	25	or
+R	2	26	xor
+R	2	27	nor
+R	3	8	jr
+I	3D		SRV
 R	3F		DUMP
-IO	4	0	Inn
-IO	4	1	Inc
-IO	4	10	Outn
-IO	4	11	Outc
-I	1E		Outni
+IO	4	0	inn
+IO	4	1	inc
+IO	4	10	outn
+IO	4	11	outc
+I	1E		outni
 I	1F		outci			
-S	1A	NA	Add Register and Storage
-S	1B	NA	Subtract Register and Storage
-S	1C	NA	Multiply Register and Storage
-S	1D	NA	Divide Register and Storage
+S	1A	NA	adds
+S	1B	NA	subs 
+S	1C	NA	muls
+S	1D	NA	divs

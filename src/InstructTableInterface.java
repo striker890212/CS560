@@ -26,12 +26,30 @@ public interface InstructTableInterface
 	
 	/**
 	 * 
-	 * @param parentItemName
+	 * @param instructionName
 	 * @return
 	 * 
-	 * This further information about an item. This method is a stub where $Item in get$Item is replaced with a specific name. This method is then repeated for
-	 * each item to get.
+	 * Get the instruction type based on the instruction name. This returns a string. It returns the string "instruction type not present" if the instruction name doesnt exist in the object.
 	 */
-	String get$Item (String parentItemName);
+	String getInstructionType (String instructionName);
+	
+	/**
+	 * 
+	 * @param instructionName
+	 * @return
+	 * 
+	 * Get the opcode based on the instruction name. This returns a string. It returns the string "opcode not present" if the instruction name doesnt exist in the object.
+	 */
+	String getInstructionOpcode (String instructionName);
+	
+	/**
+	 * 
+	 * @param functionCode
+	 * @return
+	 * 
+	 * Get the function code based on the instruction name. This returns a string. It returns the string "function code not present" if the instruction name doesnt exist in the object. It 
+	 * returns the string "NA" is the code is not applicable.
+	 */
+	String getFunctionCode (String functionCode);
 	
 }
