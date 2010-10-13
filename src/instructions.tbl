@@ -1,0 +1,62 @@
+# A = instruction type, OP = opcode, FC = function code
+#instruction types
+# R = Reg2Reg2Reg, I = I-type Imm, S = S-type Imm, J = Jump, IO = input/output
+#A	OP	FC	Instruction
+I	10	NA	Add immediate
+I	11	NA	Add immediate unsigned
+I	12		Subtract immediate
+I	13		Subtract immediate unsigned
+I	14		Multiply Immediate
+I	15		Multiply Immediate unsigned
+I	16		Divide Immediate
+I	17		Divide Immediate unsigned
+S	20	NA	Jump on equal
+S	21	NA	Jump on not equal
+S	22	NA	Jump greater than
+S	23	NA	Jump less than
+S	24	NA	Jump less than or equal
+S	27	NA	Store word address
+S	30	NA	Load word Address
+S	31	NA	Load negative word 
+S	32	NA	Load word Immediate
+I	33	NA	Load immediate
+I	34	-	Or immediate
+I	35	NA	Exclusive OR immediate
+I	36	NA	Nor Immediate
+I	37	NA	And immediate
+S	38	NA	Load address of word into Register
+S	39	NA	Store address in word 
+S	3A	NA	and register to storage
+S	3B	NA	or register to storage
+S	6	NA	Jump
+S	7	NA	Jump and link
+J	8	NA	HALT
+R	1	18	Multiply
+R	1	19	Multiply unsigned
+R	1	20	Add
+R	1	21	Add unsigned
+R	1	22	Subtract
+R	1	23	Subtract unsigned
+R	1	1A	Divide
+R	1	1B	Divide unsigned
+R	1	1C	Power
+R	2	0	Shift left logical
+R	2	2	Shift right logical
+R	2	3	Shift right arithmetic
+R	2	24	And
+R	2	25	Or
+R	2	26	Exclusive or
+R	2	27	Nor
+R	3	8	Jump register
+I	3D		Set Register Values
+R	3F		DUMP
+IO	4	0	Inn
+IO	4	1	Inc
+IO	4	10	Outn
+IO	4	11	Outc
+I	1E		Outni
+I	1F		outci			
+S	1A	NA	Add Register and Storage
+S	1B	NA	Subtract Register and Storage
+S	1C	NA	Multiply Register and Storage
+S	1D	NA	Divide Register and Storage

@@ -1,0 +1,21 @@
+#Directives		Impacts memory
+#impacts memory is true if directive is one word or longer
+.start			false
+.end			false
+.data			true
+.text			true
+Int.data		true
+Str.data		true
+Hex.data		true
+Bin.data		true
+ADR.DATA		true
+adr.exp			true
+Ent				false
+Ext				false
+NOP				true
+Exec.start		false
+Mem.skip		true		
+Equ				false
+Equ.exp			false
+Reset.lc		true
+debug			false

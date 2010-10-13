@@ -5,7 +5,8 @@
  * @author Jeff
  *
  */
-public interface ErrorData {
+public interface ErrorData 
+{
 
 	/**
 	 * Adds the necessary describing data to the ErrorData object for use <br />

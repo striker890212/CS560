@@ -8,7 +8,8 @@ import java.io.File;
  * tables or files that need to be imported). This class has the methods to import this file into a data structure.
  *
  */
-public interface InstructTableInterface {
+public interface InstructTableInterface 
+{
 
 	/**
 	 * 
